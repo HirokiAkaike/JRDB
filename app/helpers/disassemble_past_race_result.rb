@@ -113,7 +113,7 @@ class DisassemblePastRaceResult
 
   #馬名を取得する
   def getRacePerformanceHorseName
-    @pastRaceResult.b.slice(RACE_PERFORMANCE_HORSE_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_PERFORMANCE_HORSE_NAME).encode("UTF-8", "Shift_JIS")
   end
 
   #レース条件距離を取得する
@@ -168,7 +168,7 @@ class DisassemblePastRaceResult
 
   #レース条件＿トラック情報＿レース名を取得する
   def getRaceConditionRaceName
-    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME).encode("UTF-8", "Shift_JIS")
   end
 
   #レース条件＿トラック情報＿頭数を取得する
@@ -178,7 +178,7 @@ class DisassemblePastRaceResult
 
   #レース条件＿トラック情報＿レース名略称を取得する
   def getRaceConditionRaceNameShort
-    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME_SHORT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME_SHORT).encode("UTF-8", "Shift_JIS")
   end
 
   #馬成績＿着順を取得する
@@ -203,12 +203,12 @@ class DisassemblePastRaceResult
 
   #馬成績＿騎手名を取得する
   def getHorseRacePerformanceJockeyName
-    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_JOCKEY_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_JOCKEY_NAME).encode("UTF-8", "Shift_JIS")
   end
 
   #馬成績＿調教師名を取得する
   def getHorseRacePerformanceTrainerName
-    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_TRAINER_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_TRAINER_NAME).encode("UTF-8", "Shift_JIS")
   end
 
   #馬成績＿確定単勝オッズを取得する
@@ -333,7 +333,7 @@ class DisassemblePastRaceResult
 
   #JRDBデータ＿1(2)着馬名を取得する
   def getJrdbFirstSecondHorseName
-    @pastRaceResult.b.slice(JRDB_FIRST_SECOND_HORSE_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(JRDB_FIRST_SECOND_HORSE_NAME).encode("UTF-8", "Shift_JIS")
   end
 
   #JRDBデータ＿1(2)着タイム差を取得する
@@ -353,6 +353,6 @@ class DisassemblePastRaceResult
 
   #備考
   def getJrdbRemarks
-    @pastRaceResult.b.slice(JRDB_REMARKS).force_encoding("utf-8")
+    @pastRaceResult.b.slice(JRDB_REMARKS).encode("UTF-8", "Shift_JIS")
   end
 end
