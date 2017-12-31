@@ -78,7 +78,7 @@ class DisassemblePastRaceResult
 
   #開催年を取得する
   def getYearCode
-    @pastRaceResult.b(RACE_KEY_YEAR).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_KEY_YEAR).force_encoding("utf-8")
   end
 
   #競馬場ごとの回を取得する
@@ -113,92 +113,92 @@ class DisassemblePastRaceResult
 
   #馬名を取得する
   def getRacePerformanceHorseName
-    @pastRaceResult.b(RACE_PERFORMANCE_HORSE_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_PERFORMANCE_HORSE_NAME).force_encoding("utf-8")
   end
 
   #レース条件距離を取得する
   def getRaceConditionDistance
-    @pastRaceResult.b(RACE_CONDITION_DISTANCE).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_DISTANCE).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿芝ダ障害コードを取得する
   def getTruckTurfDirtFaultCode
-    @pastRaceResult.b(TRUCK_TURF_DIRT_FAULT_CODE).force_encoding("utf-8")
+    @pastRaceResult.b.slice(TRUCK_TURF_DIRT_FAULT_CODE).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿右左コードを取得する
   def getTruckRightOrLeft
-    @pastRaceResult.b(TRUCK_RIGHT_OR_LEFT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(TRUCK_RIGHT_OR_LEFT).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿内外を取得する
   def getTruckInsideOrOutside
-    @pastRaceResult.b(TRUCK_INSIDE_OR_OUTSIDE).force_encoding("utf-8")
+    @pastRaceResult.b.slice(TRUCK_INSIDE_OR_OUTSIDE).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿馬場状態を取得する
   def getRaceConditionRidingGroundCondition
-    @pastRaceResult.b(RACE_CONDITION_RIDING_GROUND_CONDITION).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_RIDING_GROUND_CONDITION).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿種別を取得する
   def getRaceConditionClass
-    @pastRaceResult.b(RACE_CONDITION_CLASS).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_CLASS).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿条件を取得する
   def getRaceConditionRequirement
-    @pastRaceResult.b(RACE_CONDITION_REQUIREMENT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_REQUIREMENT).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿記号を取得する
   def getRaceConditionSymbol
-    @pastRaceResult.b(RACE_CONDITION_SYMBOL).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_SYMBOL).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿重量を取得する
   def getRaceConditionWeight
-    @pastRaceResult.b(RACE_CONDITION_WEIGHT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_WEIGHT).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿グレードを取得する
   def getRaceConditionGrade
-    @pastRaceResult.b(RACE_CONDITION_GRADE).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_GRADE).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿レース名を取得する
   def getRaceConditionRaceName
-    @pastRaceResult.b(RACE_CONDITION_RACE_NAME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿頭数を取得する
   def getRaceConditionHorseCount
-    @pastRaceResult.b(RACE_CONDITION_HORSE_COUNT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_HORSE_COUNT).force_encoding("utf-8")
   end
 
   #レース条件＿トラック情報＿レース名略称を取得する
   def getRaceConditionRaceNameShort
-    @pastRaceResult.b(RACE_CONDITION_RACE_NAME_SHORT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(RACE_CONDITION_RACE_NAME_SHORT).force_encoding("utf-8")
   end
 
   #馬成績＿着順を取得する
   def getHorseRacePerformanceRanking
-    @pastRaceResult.b(HORSE_RACE_PERFORMANCE_RANKING).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_RANKING).force_encoding("utf-8")
   end
 
   #馬成績＿異常区分を取得する
   def getHorseRacePerformanceAbnormalClassification
-    @pastRaceResult.b(HORSE_RACE_PERFORMANCE_ABNORMAL_CLASSIFICATION).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_ABNORMAL_CLASSIFICATION).force_encoding("utf-8")
   end
 
   #馬成績＿タイムを取得する
   def getHorseRacePerformanceTime
-    @pastRaceResult.b(HORSE_RACE_PERFORMANCE_TIME).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_TIME).force_encoding("utf-8")
   end
 
   #馬成績＿斤量を取得する
   def getHorseRacePerformanceBasisWeight
-    @pastRaceResult.b(HORSE_RACE_PERFORMANCE_BASIS_WEIGHT).force_encoding("utf-8")
+    @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_BASIS_WEIGHT).force_encoding("utf-8")
   end
 
   #馬成績＿騎手名を取得する
