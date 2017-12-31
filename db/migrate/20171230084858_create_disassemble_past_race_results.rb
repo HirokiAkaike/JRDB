@@ -19,51 +19,51 @@ class CreateDisassemblePastRaceResults < ActiveRecord::Migration[5.1]
       t.string :truck_right_or_left
       t.string :truck_inside_or_outside
       #レース条件
-      t.string :race_condition_riding_ground_condition
-      t.string :race_condition_class
+      t.integer :race_condition_riding_ground_condition
+      t.integer :race_condition_class
       t.string :race_condition_requirement
-      t.string :race_condition_symbol
-      t.string :race_condition_weight
-      t.string :race_condition_grade
+      t.integer :race_condition_symbol
+      t.integer :race_condition_weight
+      t.integer :race_condition_grade
       t.string :race_condition_race_name
-      t.string :race_condition_horse_count
+      t.integer :race_condition_horse_count
       t.string :race_condition_race_name_short
       #馬成績
-      t.string :horse_race_performance_ranking
-      t.string :horse_race_performance_abnormal_classification
-      t.string :horse_race_performance_time
-      t.string :horse_race_performance_basis_weight
+      t.integer :horse_race_performance_ranking
+      t.integer :horse_race_performance_abnormal_classification
+      t.integer :horse_race_performance_time
+      t.integer :horse_race_performance_basis_weight
       t.string :horse_race_performance_jockey_name
       t.string :horse_race_performance_trainer_name
       t.float :horse_race_performance_confirm_win_odds
-      t.string :horse_race_performance_confirm_win_popular_rank
+      t.integer :horse_race_performance_confirm_win_popular_rank
       #jrdbデータ
-      t.string :jrdb_idm
-      t.string :jrdb_primary_point
-      t.string :jrdb_riding_ground_reference
-      t.string :jrdb_pace
-      t.string :jrdb_lagging
-      t.string :jrdb_position_of_race
-      t.string :jrdb_unfavorable
-      t.string :jrdb_unfavorable_before
-      t.string :jrdb_unfavorable_middle
-      t.string :jrdb_unfavorable_after
-      t.string :jrdb_race
-      t.string :jrdb_course_removal
+      t.integer :jrdb_idm
+      t.integer :jrdb_primary_point
+      t.integer :jrdb_riding_ground_reference
+      t.integer :jrdb_pace
+      t.integer :jrdb_lagging
+      t.integer :jrdb_position_of_race
+      t.integer :jrdb_unfavorable
+      t.integer :jrdb_unfavorable_before
+      t.integer :jrdb_unfavorable_middle
+      t.integer :jrdb_unfavorable_after
+      t.integer :jrdb_race
+      t.integer :jrdb_course_removal
       t.string :jrdb_rising_code
       t.string :jrdb_class_code
-      t.string :jrdb_horse_body_code
-      t.string :jrdb_sign_code
+      t.integer :jrdb_horse_body_code
+      t.integer :jrdb_sign_code
       t.string :jrdb_race_pace
       t.string :jrdb_horse_pace
-      t.string :jrdb_ten_index
-      t.string :jrdb_rising_index_code
-      t.string :jrdb_pace_index
-      t.string :jrdb_race_pace_index
+      t.float :jrdb_ten_index
+      t.float :jrdb_rising_index_code
+      t.float :jrdb_pace_index
+      t.float :jrdb_race_pace_index
       t.string :jrdb_first_second_horse_name
-      t.string :jrdb_first_second_horse_time_reference
-      t.string :jrdb_before_3f_time
-      t.string :jrdb_after_3f_time
+      t.float :jrdb_first_second_horse_time_reference
+      t.float :jrdb_before_3f_time
+      t.float :jrdb_after_3f_time
       t.string :jrdb_remarks
 
       t.timestamps
