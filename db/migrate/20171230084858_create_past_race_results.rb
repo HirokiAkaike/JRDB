@@ -5,7 +5,7 @@ class CreatePastRaceResults < ActiveRecord::Migration[5.1]
       t.string :race_key_course_code
       t.string :race_key_year
       t.string :race_key_times
-      t.date :race_key_day
+      t.string :race_key_day
       t.string :race_key_number_of_race
       t.string :race_key_horse_number
       #競争成績キー

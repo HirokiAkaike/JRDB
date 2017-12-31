@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171230084858) do
     t.string "race_key_course_code"
     t.string "race_key_year"
     t.string "race_key_times"
-    t.date "race_key_day"
+    t.string "race_key_day"
     t.string "race_key_number_of_race"
     t.string "race_key_horse_number"
     t.string "race_performance_pedigree_register_code"
