@@ -1,4 +1,4 @@
-class CreateDisassemblePastRaceResults < ActiveRecord::Migration[5.1]
+class CreatePastRaceResults < ActiveRecord::Migration[5.1]
   def change
     create_table :disassemble_past_race_results do |t|
       #レースキー
