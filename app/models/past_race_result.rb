@@ -1,2 +1,2 @@
-class DisassemblePastRaceResult < ApplicationRecord
+class PastRaceResult < ApplicationRecord
 end

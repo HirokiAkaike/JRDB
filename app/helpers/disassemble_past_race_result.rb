@@ -71,9 +71,49 @@ class DisassemblePastRaceResult
   def initialize(pastRaceResultRecord)
     @pastRaceResult = pastRaceResultRecord
   end
+  #開催競馬場コードを取得する
+  def getRaceCourseCode
+    @pastRaceResult.b.slice(RACE_KEY_COURSE_CODE).force_encoding("utf-8")
+  end
 
-  def getRacePerformanceHoreseName
-    @pastRaceResult.b(RACE_PERFORMANCE_HORESE_NAME).force_encoding("utf-8")
+  #開催年を取得する
+  def getYearCode
+    @pastRaceResult.b(RACE_KEY_YEAR).force_encoding("utf-8")
+  end
+
+  #競馬場ごとの回を取得する
+  def getTimesCode
+    @pastRaceResult.b.slice(RACE_KEY_TIMES).force_encoding("utf-8")
+  end
+
+  #競馬場ごとの日目を取得する
+  def getDayCode
+    @pastRaceResult.b.slice(RACE_KEY_DAY).force_encoding("utf-8")
+  end
+
+  #レース番号を取得する
+  def getNumberOfRace
+    @pastRaceResult.b.slice(RACE_KEY_NUMBER_OF_RACE).force_encoding("utf-8")
+  end
+
+  #馬番を取得する
+  def getHorseNumber
+    @pastRaceResult.b.slice(RACE_KEY_HORSE_NUMBER).force_encoding("utf-8")
+  end
+
+  #血統登録番号を取得する
+  def getRacePerformancePedigreeRegisterCode
+    @pastRaceResult.b.slice(RACE_PERFORMANCE_PEDIGREE_REGISTER_CODE).force_encoding("utf-8")
+  end
+
+  #年月日を取得する
+  def getRacePerformanceDateYmd
+    @pastRaceResult.b.slice(RACE_PERFORMANCE_DATE_YMD).force_encoding("utf-8")
+  end
+
+  #馬名を取得する
+  def getRacePerformanceHorseName
+    @pastRaceResult.b(RACE_PERFORMANCE_HORSE_NAME).force_encoding("utf-8")
   end
 
   #レース条件距離を取得する
@@ -161,47 +201,6 @@ class DisassemblePastRaceResult
     @pastRaceResult.b(HORSE_RACE_PERFORMANCE_BASIS_WEIGHT).force_encoding("utf-8")
   end
 
-  #開催競馬場コードを取得する
-  def getRaceCourseCode
-    @pastRaceResult.b.slice(RACE_KEY_COURSE_CODE).force_encoding("utf-8")
-  end
-
-  #開催年を取得する
-  def getYearCode
-    @pastRaceResult.b(RACE_KEY_YEAR).force_encoding("utf-8")
-  end
-
-  #競馬場ごとの回を取得する
-  def getTimesCode
-    @pastRaceResult.b.slice(RACE_KEY_TIMES).force_encoding("utf-8")
-  end
-
-  #競馬場ごとの日目を取得する
-  def getDayCode
-    @pastRaceResult.b.slice(RACE_KEY_DAY).force_encoding("utf-8")
-  end
-
-  #レース番号を取得する
-  def getNumberOfRace
-    @pastRaceResult.b.slice(RACE_KEY_NUMBER_OF_RACE).force_encoding("utf-8")
-  end
-
-  #馬番を取得する
-  def getRacePerformanceHorseNumber
-    @pastRaceResult.b.slice(RACE_KEY_HORSE_NUMBER).force_encoding("utf-8")
-  end
-
-  #血統登録番号を取得する
-  def getRacePerformancePedigreeRegisterCode
-    @pastRaceResult.b.slice(RACE_PERFORMANCE_PEDIGREE_REGISTER_CODE).force_encoding("utf-8")
-  end
-
-  #年月日を取得する
-  def getRacePerformanceDateYmd
-    @pastRaceResult.b.slice(RACE_PERFORMANCE_DATE_YMD).force_encoding("utf-8")
-  end
-
-  #馬名を取得する
   #馬成績＿騎手名を取得する
   def getHorseRacePerformanceJockeyName
     @pastRaceResult.b.slice(HORSE_RACE_PERFORMANCE_JOCKEY_NAME).force_encoding("utf-8")
