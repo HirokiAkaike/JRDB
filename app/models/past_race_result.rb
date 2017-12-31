@@ -1,2 +1,2 @@
-class PastRaceResult < ApplicationRecord
+class PastRaceResult < ActiveRecord::Base
 end

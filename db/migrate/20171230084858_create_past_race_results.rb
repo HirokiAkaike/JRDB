@@ -1,6 +1,6 @@
 class CreatePastRaceResults < ActiveRecord::Migration[5.1]
   def change
-    create_table :disassemble_past_race_results do |t|
+    create_table :past_race_results do |t|
       #レースキー
       t.string :race_key_course_code
       t.string :race_key_year
