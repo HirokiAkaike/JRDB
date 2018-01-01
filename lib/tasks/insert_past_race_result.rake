@@ -7,7 +7,6 @@ namespace :insert_past_race_result do
   desc "past_race_result"
   task :past_race_result => :environment do
     targetFilesPath = Dir.glob TARGET_FILE
-    p targetFilesPath
     targetFilesPath.each do |filePath|
       File.open(filePath) do |file|
         if File::ftype(filePath) == "directory"
