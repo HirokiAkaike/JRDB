@@ -153,11 +153,6 @@ class DisassembleRefundBetTicket
     @refundBetTicket.b.slice(RACE_KEY_NUMBER_OF_RACE).force_encoding("utf-8")
   end
 
-  #馬番を取得する
-  def getHorseNumber
-    @refundBetTicket.b.slice(HORSE_NUMBER).force_encoding("utf-8")
-  end
-
   def getWinHorseNumber_1
     @refundBetTicket.b.slice(WIN_HORSE_NUMBER_1).force_encoding("utf-8")
   end
