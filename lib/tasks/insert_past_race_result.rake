@@ -2,14 +2,17 @@ namespace :insert_past_race_result do
   require_relative '../../app/helpers/disassemble_past_race_result.rb'
   require_relative '../../app/models/past_race_result.rb'
   require_relative '../../app/models/application_record.rb'
-  TARGET_FILE = "db/resources/*"
+  TARGET_FILE = "db/resources/**/*"
 
   desc "past_race_result"
   task :past_race_result => :environment do
     targetFilesPath = Dir.glob TARGET_FILE
-
+    p targetFilesPath
     targetFilesPath.each do |filePath|
       File.open(filePath) do |file|
+        if File::ftype(filePath) == "directory"
+          next
+        end
         file.each_line do |line|
           disassemblePastRaceResult = DisassemblePastRaceResult.new(line)
           pastRaceResult = PastRaceResult.new(
