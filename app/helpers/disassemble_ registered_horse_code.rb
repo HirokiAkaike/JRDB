@@ -72,64 +72,252 @@ class DisassembleRegisteredHorseCode
     @raceCode = raceCode
   end
 
-  #開催競馬場コードを取得する
-  def getRaceCourseCode
-    @raceCode.slice COURSE_CODE_POSITION
+  def getCourseCodePosition
+    @raceCode.slice(COURSE_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #開催年を取得する
-  def getYearCode
-    @raceCode.slice YEAR_CODE_POSITION
+  def getYearCodePosition
+    @raceCode.slice(YEAR_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #競馬場ごとの回を取得する
-  def getTimesCode
-    @raceCode.slice TIMES_CODE_POSITION
+  def getTimesCodePosition
+    @raceCode.slice(TIMES_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #競馬場ごとの日目を取得する(16進数)
-  def getDayCode
-    @raceCode.slice TIMES_CODE_POSITION
+  def getDayCodePosition
+    @raceCode.slice(DAY_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #レース番号を取得する
-  def getNumberOfRace
-    @raceCode.slice NUMBER_OF_RACE_POSITION
+  def getNumberOfRacePosition
+    @raceCode.slice(NUMBER_OF_RACE_POSITION).force_encoding("utf-8")
   end
 
-  #馬名キーを取得する
-  def getHorseNameCode
-    @raceCode.slice HORSE_NAME_CODE_POSITION
+  def getHorseNameCodePosition
+    @raceCode.slice(HORSE_NAME_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #血統登録番号を取得する
-  def getHorsePedigreeRegsitrationCode
-    @raceCode.slice HORSE_PEDIGREE_REGISTRATION_CODE_POSITION
+  def getHorsePedigreeRegistrationCodePosition
+    @raceCode.slice(HORSE_PEDIGREE_REGISTRATION_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #馬名を取得する
   def getHorseNamePosition
-    @raceCode.slice HORSE_NAME_POSITION
+    @raceCode.slice(HORSE_NAME_POSITION).encode("UTF-8", "Shift_JIS")
   end
 
-  #馬の性別を取得する
-  def getHorseGenderCode
-    @raceCode.slice HORSE_GENDER_CODE_POSITION
+  def getHorseGenderCodePosition
+    @raceCode.slice(HORSE_GENDER_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #馬記号コードを取得する
-  def getHorseSymbolCode
-    @raceCode.slice HORSE_SYMBOL_CODE_POSITION
+  def getHorseSymbolCodePosition
+    @raceCode.slice(HORSE_SYMBOL_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #ブリンカーコードを取得する
-  def getBlinkerCode
-    @raceCode.slice BLINKER_CODE_POSITION
+  def getBlinkerCodePosition
+    @raceCode.slice(BLINKER_CODE_POSITION).force_encoding("utf-8")
   end
 
-  #騎手名を取得する
-  def getJockeyName
-    @raceCode.slice JOCKEY_NAME_POSITION
+  def getJocKeyNamePosition
+    @raceCode.slice(JOCKEY_NAME_POSITION)..encode("UTF-8", "Shift_JIS")
+  end
+
+  def getBurdenWeightPosition
+    @raceCode.slice(BURDEN_WEIGHT_POSITION).force_encoding("utf-8")
+  end
+
+  def getApprenticeClassPosition
+    @raceCode.slice(APPRENTICE_CLASS_POSITION).force_encoding("utf-8")
+  end
+
+  def getTrainerNamePosition
+    @raceCode.slice(TRAINER_NAME_POSITION).encode("UTF-8", "Shift_JIS")
+  end
+
+  def getTrainerBelongPosition
+    @raceCode.slice(TRAINER_BELONG_POSITION).force_encoding("utf-8")
+  end
+
+  def getIdmPositionPosition
+    @raceCode.slice(IDM_POSITION_POSITION).force_encoding("utf-8")
+  end
+
+  def getRisingDegreePosition
+    @raceCode.slice(RISING_DEGREE_POSITION).force_encoding("utf-8")
+  end
+
+  def getRotationPosition
+    @raceCode.slice(ROTATION_POSITION).force_encoding("utf-8")
+  end
+
+  def getLegQualityPosition
+    @raceCode.slice(LEG_QUALITY_POSITION).force_encoding("utf-8")
+  end
+
+  def getDistanceAptitudePosition
+    @raceCode.slice(DISTANCE_APTITUDE_POSITION).force_encoding("utf-8")
+  end
+
+  def getDistanceAptitudeSecondPosition
+    @raceCode.slice(DISTANCE_APTITUDE_SECOND_POSITION).force_encoding("utf-8")
+  end
+
+  def getTurfAptitudeCodePosition
+    @raceCode.slice(TURF_APTITUDE_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getDartAptitudeCodePosition
+    @raceCode.slice(DART_APTITUDE_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getHeavinessAptitudeCodePosition
+    @raceCode.slice(HEAVINESS_APTITUDE_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getHoofCodePosition
+    @raceCode.slice(HOOF_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getClassCodePosition
+    @raceCode.slice(CLASS_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getCoatColorCodePosition
+    @raceCode.slice(COAT_COLOR_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_1_RaceScoreKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_1_RACE_SCORE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_2_RaceScoreKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_2_RACE_SCORE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_3_RaceScoreKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_3_RACE_SCORE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_4_RaceScoreKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_4_RACE_SCORE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_5_RaceScoreKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_5_RACE_SCORE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_1_RaceKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_1_RACE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_2_RaceKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_2_RACE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_3_RaceKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_3_RACE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_4_RaceKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_4_RACE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getOtherDataLinkKeyprebiousRun_5_RaceKeyPosition
+    @raceCode.slice(OTHER_DATA_LINK_KEY_PREBIOUS_RUN_5_RACE_KEY_POSITION).force_encoding("utf-8")
+  end
+
+  def getJocKeyCodePosition
+    @raceCode.slice(JOCKEY_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getTrainerCodePosition
+    @raceCode.slice(TRAINER_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getWinningPrizePosition
+    @raceCode.slice(WINNING_PRIZE_POSITION).force_encoding("utf-8")
+  end
+
+  def getIncomePrizePosition
+    @raceCode.slice(INCOME_PRIZE_POSITION).force_encoding("utf-8")
+  end
+
+  def getConditionClassPosition
+    @raceCode.slice(CONDITION_CLASS_POSITION).force_encoding("utf-8")
+  end
+
+  def getExercisePosition
+    @raceCode.slice(EXERCISE_POSITION).force_encoding("utf-8")
+  end
+
+  def getBodyTypePosition
+    @raceCode.slice(BODY_TYPE_POSITION).force_encoding("utf-8")
+  end
+
+  def getBodyTypeTotal_1_Position
+    @raceCode.slice(BODY_TYPE_TOTAL_1_POSITION).force_encoding("utf-8")
+  end
+
+  def getBodyTypeTotal_2_Position
+    @raceCode.slice(BODY_TYPE_TOTAL_2_POSITION).force_encoding("utf-8")
+  end
+
+  def getBodyTypeTotal_3_Position
+    @raceCode.slice(BODY_TYPE_TOTAL_3_POSITION).force_encoding("utf-8")
+  end
+
+  def getHorseSpecialMention_1_Position
+    @raceCode.slice(HORSE_SPECIAL_MENTION_1_POSITION).force_encoding("utf-8")
+  end
+
+  def getHorseSpecialMention_2_Position
+    @raceCode.slice(HORSE_SPECIAL_MENTION_2_POSITION).force_encoding("utf-8")
+  end
+
+  def getHorseSpecialMention_3_Position
+    @raceCode.slice(HORSE_SPECIAL_MENTION_3_POSITION).force_encoding("utf-8")
+  end
+
+  def getExpansionForecastDataTenindexPosition
+    @raceCode.slice(EXPANSION_FORECAST_DATA_TEN_INDEX_POSITION).force_encoding("utf-8")
+  end
+
+  def getExpansionForecastDataPaceindexPosition
+    @raceCode.slice(EXPANSION_FORECAST_DATA_PACE_INDEX_POSITION).force_encoding("utf-8")
+  end
+
+  def getExpansionForecastDataRicingindexPosition
+    @raceCode.slice(EXPANSION_FORECAST_DATA_RICING_INDEX_POSITION).force_encoding("utf-8")
+  end
+
+  def getExpansionForecastDataPositionindexPosition
+    @raceCode.slice(EXPANSION_FORECAST_DATA_POSITION_INDEX_POSITION).force_encoding("utf-8")
+  end
+
+  def getHorseStartIndexPosition
+    @raceCode.slice(HORSE_START_INDEX_POSITION).force_encoding("utf-8")
+  end
+
+  def getHorseLaggingRatePosition
+    @raceCode.slice(HORSE_LAGGING_RATE_POSITION).force_encoding("utf-8")
+  end
+
+  def getRunningBeforeReferencePosition
+    @raceCode.slice(RUNNING_BEFORE_REFERENCE_POSITION).force_encoding("utf-8")
+  end
+
+  def getReferenceRidingHorseCodePosition
+    @raceCode.slice(REFERENCE_RIDING_HORSE_CODE_POSITION).force_encoding("utf-8")
+  end
+
+  def getDataPartitionPosition
+    @raceCode.slice(DATA_PARTITION_POSITION).force_encoding("utf-8")
+  end
+
+  def getLeadingRankPosition
+    @raceCode.slice(LEADING_RANK_POSITION).force_encoding("utf-8")
+  end
+
+  def getReservePosition
+    @raceCode.slice(RESERVE_POSITION).force_encoding("utf-8")
   end
 
 end
