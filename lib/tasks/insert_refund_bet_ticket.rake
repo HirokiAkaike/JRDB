@@ -1,4 +1,4 @@
-namespace :insert_past_race_result do
+namespace :insert_refund_bet_ticket do
   require_relative '../../app/helpers/../../app/helpers/disassemble_refund_bet_ticket.rb'
   require_relative '../../app/models/refund_bet_ticket.rb'
   require_relative '../../app/models/application_record.rb'
@@ -8,6 +8,7 @@ namespace :insert_past_race_result do
   task :refund_bet_ticket => :environment do
     targetFilesPath = Dir.glob TARGET_FILE
     targetFilesPath.each do |filePath|
+      refundBetTickets = []
       File.open(filePath) do |file|
         if File::ftype(filePath) == "directory"
           next
@@ -130,9 +131,10 @@ namespace :insert_past_race_result do
               trifecta_6_horse_number_3: disassembleRefundTicket.getTrifecta_6_HorseNumber_3,
               trifecta_6_odds: disassembleRefundTicket.getTrifecta_6_Odds
           )
-          refundBetTicket.save
+          refundBetTickets << refundBetTicket
         end
       end
+      RefundBetTicket.import refundBetTickets
     end
-  end
+ end
 end
