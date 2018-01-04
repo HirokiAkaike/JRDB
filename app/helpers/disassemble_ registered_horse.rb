@@ -1,10 +1,11 @@
-#登録馬データ作成は一旦ペンド
-class DisassembleRegisteredHorseCode
-  COURSE_CODE_POSITION = (0..1)
-  YEAR_CODE_POSITION = (2..3)
-  TIMES_CODE_POSITION = 4
-  DAY_CODE_POSITION = 5
-  NUMBER_OF_RACE_POSITION = (6..7)
+class DisassembleRegisteredHorse
+  #レースキー
+  RACE_KEY_COURSE_CODE = (0..1)
+  RACE_KEY_YEAR = (2..3)
+  RACE_KEY_TIMES = 4
+  RACE_KEY_DAY = 5
+  RACE_KEY_NUMBER_OF_RACE = (6..7)
+
   HORSE_NAME_CODE_POSITION = (8..47)
   HORSE_PEDIGREE_REGISTRATION_CODE_POSITION = (48..55)
   HORSE_NAME_POSITION = (56..91)
@@ -67,24 +68,29 @@ class DisassembleRegisteredHorseCode
     @raceCode = raceCode
   end
 
-  def getCourseCodePosition
-    @raceCode.slice(COURSE_CODE_POSITION).force_encoding("utf-8")
+  #開催競馬場コードを取得する
+  def getRaceCourseCode
+    @refundBetTicket.b.slice(RACE_KEY_COURSE_CODE).force_encoding("utf-8")
   end
 
-  def getYearCodePosition
-    @raceCode.slice(YEAR_CODE_POSITION).force_encoding("utf-8")
+  #開催年を取得する
+  def getYearCode
+    @refundBetTicket.b.slice(RACE_KEY_YEAR).force_encoding("utf-8")
   end
 
-  def getTimesCodePosition
-    @raceCode.slice(TIMES_CODE_POSITION).force_encoding("utf-8")
+  #競馬場ごとの回を取得する
+  def getTimesCode
+    @refundBetTicket.b.slice(RACE_KEY_TIMES).force_encoding("utf-8")
   end
 
-  def getDayCodePosition
-    @raceCode.slice(DAY_CODE_POSITION).force_encoding("utf-8")
+  #競馬場ごとの日目を取得する
+  def getDayCode
+    @refundBetTicket.b.slice(RACE_KEY_DAY).force_encoding("utf-8")
   end
 
-  def getNumberOfRacePosition
-    @raceCode.slice(NUMBER_OF_RACE_POSITION).force_encoding("utf-8")
+  #レース番号を取得する
+  def getNumberOfRace
+    @refundBetTicket.b.slice(RACE_KEY_NUMBER_OF_RACE).force_encoding("utf-8")
   end
 
   def getHorseNameCodePosition
