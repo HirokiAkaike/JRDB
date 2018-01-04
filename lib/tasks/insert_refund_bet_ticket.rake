@@ -2,7 +2,7 @@ namespace :insert_refund_bet_ticket do
   require_relative '../../app/helpers/../../app/helpers/disassemble_refund_bet_ticket.rb'
   require_relative '../../app/models/refund_bet_ticket.rb'
   require_relative '../../app/models/application_record.rb'
-  TARGET_FILE = "db/resources/refund_bet_ticket/**/*"
+#  TARGET_FILE = "db/resources/refund_bet_ticket/**/*"
 
   desc "refund_bet_ticket"
   task :refund_bet_ticket => :environment do

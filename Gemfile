@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 #bulk insertが可能になる
 gem "activerecord-import"
+#論理削除をサポートしてくれる
+gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

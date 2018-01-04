@@ -5,3 +5,6 @@ rake insert_past_race_result:past_race_result
 
 ○過去払戻金テーブル挿入用のコマンド
 rake insert_refund_bet_ticket:refund_bet_ticket
+
+○今週分の登録馬を登録する
+rake insert_registered_horse:registered_horse
