@@ -82,7 +82,6 @@ namespace :insert_registered_horse do
           registeredHorses << registeredHorse
         end
       end
-      p registeredHorses
       RegisteredHorse.import registeredHorses
     end
   end

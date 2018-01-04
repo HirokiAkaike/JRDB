@@ -256,6 +256,7 @@ ActiveRecord::Schema.define(version: 20180104002301) do
     t.string "data_partition"
     t.string "leading_rank"
     t.string "reserve"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -94,7 +94,7 @@ class DisassembleRegisteredHorse
   end
 
   def getHorseNameCodePosition
-    @registeredHorse.b.slice(HORSE_NAME_CODE_POSITION).force_encoding("utf-8")
+    @registeredHorse.b.slice(HORSE_NAME_CODE_POSITION).encode("UTF-8", "Shift_JIS")
   end
 
   def getHorsePedigreeRegistrationCodePosition
@@ -134,7 +134,7 @@ class DisassembleRegisteredHorse
   end
 
   def getTrainerBelongPosition
-    @registeredHorse.b.slice(TRAINER_BELONG_POSITION).force_encoding("utf-8")
+    @registeredHorse.b.slice(TRAINER_BELONG_POSITION).encode("UTF-8", "Shift_JIS")
   end
 
   def getIdmPositionPosition
