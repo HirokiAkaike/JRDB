@@ -2,11 +2,11 @@ namespace :insert_refund_bet_ticket do
   require_relative '../../app/helpers/../../app/helpers/disassemble_refund_bet_ticket.rb'
   require_relative '../../app/models/refund_bet_ticket.rb'
   require_relative '../../app/models/application_record.rb'
-#  TARGET_FILE = "db/resources/refund_bet_ticket/**/*"
+  REFUND_BET_TICKET_TARGET_FILE = "db/resources/refund_bet_ticket/**/*"
 
   desc "refund_bet_ticket"
   task :refund_bet_ticket => :environment do
-    targetFilesPath = Dir.glob TARGET_FILE
+    targetFilesPath = Dir.glob PAST_RACE_RESULT_TARGET_FILE
     targetFilesPath.each do |filePath|
       refundBetTickets = []
       File.open(filePath) do |file|

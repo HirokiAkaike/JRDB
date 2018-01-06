@@ -2,11 +2,11 @@ namespace :insert_registered_horse do
   require_relative '../../app/helpers/disassemble_registered_horse.rb'
   require_relative '../../app/models/registered_horse.rb'
   require_relative '../../app/models/application_record.rb'
-  TARGET_FILE = "db/resources/registered_horse/**/*"
+  REGISTERED_HORSE_TARGET_FILE = "db/resources/registered_horse/**/*"
 
   desc "registered_horse"
   task :registered_horse => :environment do
-    targetFilesPath = Dir.glob TARGET_FILE
+    targetFilesPath = Dir.glob REGISTERED_HORSE_TARGET_FILE
     targetFilesPath.each do |filePath|
       registeredHorses = []
       File.open(filePath) do |file|
