@@ -49,11 +49,19 @@ class DisassembleBasicHorse
   end
 
   def getPedigreeInfoMotherName
-    @basicHorse.b.slice(PEDIGREE_INFO_MOTHER_NAME).encode("UTF-8", "Shift_JIS")
+    begin
+      @basicHorse.b.slice(PEDIGREE_INFO_MOTHER_NAME).encode("UTF-8", "Shift_JIS")
+    rescue => e
+      p e
+    end
   end
 
   def getPedigreeInfoMaternalFatherName
-    @basicHorse.b.slice(PEDIGREE_INFO_MATERNAL_FATHER_NAME).encode("UTF-8", "Shift_JIS")
+    begin
+      @basicHorse.b.slice(PEDIGREE_INFO_MATERNAL_FATHER_NAME).encode("UTF-8", "Shift_JIS")
+    rescue => e
+      p e
+    end
   end
 
   def getPedigreeInfoBarthOn
@@ -73,7 +81,12 @@ class DisassembleBasicHorse
   end
 
   def getPedigreeInfoOwnerName
-    @basicHorse.b.slice(PEDIGREE_INFO_OWNER_NAME).encode("UTF-8", "Shift_JIS")
+    begin
+      @basicHorse.b.slice(PEDIGREE_INFO_OWNER_NAME).encode("UTF-8", "Shift_JIS")
+    rescue => e
+      p e
+      return nil
+    end
   end
 
   def getPedigreeInfoOwnerBelongCode
@@ -81,7 +94,12 @@ class DisassembleBasicHorse
   end
 
   def getPedigreeInfoProducerName
-    @basicHorse.b.slice(PEDIGREE_INFO_PRODUCER_NAME).encode("UTF-8", "Shift_JIS")
+    begin
+      @basicHorse.b.slice(PEDIGREE_INFO_PRODUCER_NAME).encode("UTF-8", "Shift_JIS")
+    rescue => e
+      p e
+      return nil
+    end
   end
 
   def getPedigreeInfoProductionPlaceName

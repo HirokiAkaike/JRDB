@@ -41,6 +41,7 @@ namespace :insert_basic_horse do
         end
       end
       BasicHorse.import basicHorses
+      sleep 10
     end
   end
 end
