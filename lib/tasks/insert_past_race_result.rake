@@ -1,6 +1,6 @@
 namespace :insert_past_race_result do
   require_relative '../../app/helpers/disassemble_past_race_result.rb'
-  require_rlative '../../app/models/past_race_result.rb'
+  require_relative '../../app/models/past_race_result.rb'
   require_relative '../../app/models/application_record.rb'
   PAST_RACE_RESULT_TARGET_FILE = "db/resources/past_race_result/**/*"
 
