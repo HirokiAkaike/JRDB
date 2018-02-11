@@ -1,0 +1,3 @@
+class HoldingRace < ApplicationRecord
+
+end

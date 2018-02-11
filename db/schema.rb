@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180106133207) do
+ActiveRecord::Schema.define(version: 20180211163757) do
 
   create_table "basic_horses", force: :cascade do |t|
     t.string "pedigree_register_code"
@@ -33,6 +33,37 @@ ActiveRecord::Schema.define(version: 20180106133207) do
     t.date "pedigree_info_data_ymd"
     t.string "pedigree_info_father_lineage_code"
     t.string "pedigree_info_maternal_father_lineage_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "holding_races", force: :cascade do |t|
+    t.string "holding_race_key"
+    t.string "race_key_course_code"
+    t.string "race_key_year"
+    t.string "race_key_times"
+    t.string "race_key_day"
+    t.date "date_ymd"
+    t.string "holding_class"
+    t.string "day_of_week"
+    t.string "course_name"
+    t.string "weather_code"
+    t.string "turf_course_state_code"
+    t.string "turf_course_Inside_state"
+    t.string "turf_course_middle_state"
+    t.string "turf_course_outside_state"
+    t.string "turf_course_difference"
+    t.string "linear_course_difference_must_inside"
+    t.string "linear_course_difference_inside"
+    t.string "linear_course_difference_middle"
+    t.string "linear_course_difference_outside"
+    t.string "linear_course_difference_must_outside"
+    t.string "dirt_course_state_code"
+    t.string "dirt_course_Inside_state"
+    t.string "dirt_course_middle_state"
+    t.string "dirt_course_outside_state"
+    t.string "dirt_course_difference"
+    t.string "data_class"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
