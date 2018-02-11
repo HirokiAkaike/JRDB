@@ -1,4 +1,4 @@
-class RegisteredHorse < ActiveRecord::Migration[5.1]
+class RegisteredHorses < ActiveRecord::Migration[5.1]
   def change
     create_table :registered_horses do |t|
       #レースキー

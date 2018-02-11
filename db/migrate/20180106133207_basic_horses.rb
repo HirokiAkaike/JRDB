@@ -1,4 +1,4 @@
-class BasicHorse < ActiveRecord::Migration[5.1]
+class BasicHorses < ActiveRecord::Migration[5.1]
   def change
     create_table :basic_horses do |t|
       t.string :pedigree_register_code

@@ -1,4 +1,4 @@
-class RefundBetTicket < ActiveRecord::Migration[5.1]
+class RefundBetTickets < ActiveRecord::Migration[5.1]
   def change
     create_table :refund_bet_tickets do |t|
       #レースキー
