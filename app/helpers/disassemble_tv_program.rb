@@ -30,7 +30,7 @@ class DisassembleTvProgram
   Five_Prize_Money = (145..149)
   One_Budget_Cash_Prize = (150..154)
   Two_Budget_Cash_Prize = (155..159)
-  Ticket＿Release_Flg = (160..175)
+  Ticket_Release_Flg = (160..175)
   Win_Five_Flg = 176
 
   def initialize(tvProgram)
@@ -68,7 +68,7 @@ class DisassembleTvProgram
   def getFivePrizeMoney() @tvProgram.b.slice(Five_Prize_Money).force_encoding("utf-8") end
   def getOneBudgetCashPrize() @tvProgram.b.slice(One_Budget_Cash_Prize).force_encoding("utf-8") end
   def getTwoBudgetCashPrize() @tvProgram.b.slice(Two_Budget_Cash_Prize).force_encoding("utf-8") end
-  def getTicket＿ReleaseFlg() @tvProgram.b.slice(Ticket＿Release_Flg).force_encoding("utf-8") end
+  def getTicket＿ReleaseFlg() @tvProgram.b.slice(Ticket_Release_Flg).force_encoding("utf-8") end
   def getWinFiveFlg() @tvProgram.b.slice(Win_Five_Flg).force_encoding("utf-8") end
 
 end
