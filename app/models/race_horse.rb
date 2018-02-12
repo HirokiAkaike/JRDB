@@ -1,0 +1,2 @@
+class RaceHorse < ApplicationRecord
+end
