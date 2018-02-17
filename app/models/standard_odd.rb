@@ -1,0 +1,2 @@
+class StandardOdd < ApplicationRecord
+end
