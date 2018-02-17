@@ -1,0 +1,2 @@
+class JrdbInformation < ApplicationRecord
+end
