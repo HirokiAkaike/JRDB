@@ -1,0 +1,2 @@
+class RaceHorseExtention < ApplicationRecord
+end
