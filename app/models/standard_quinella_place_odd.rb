@@ -1,0 +1,2 @@
+class StandardQuinellaPlaceOdd < ApplicationRecord
+end
