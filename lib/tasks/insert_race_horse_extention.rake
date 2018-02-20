@@ -2,7 +2,7 @@ namespace :insert_race_horse_extention_extention do
   require_relative '../../app/helpers/disassemble_race_horse_extention.rb'
   require_relative '../../app/models/race_horse_extention.rb'
   require_relative '../../app/models/application_record.rb'
-  TV_PROGRAM_TARGET_FILE = "db/resources/race_horse_extention/**/*"
+  RACE_HORSE_EXTENTION_TARGET_FILE = "db/resources/race_horse_extention/**/*"
 
   desc "race_horse_extention"
   task :race_horse_extention => :environment do

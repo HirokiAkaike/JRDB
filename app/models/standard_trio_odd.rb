@@ -1,0 +1,2 @@
+class StandardTrioOdd < ApplicationRecord
+end
