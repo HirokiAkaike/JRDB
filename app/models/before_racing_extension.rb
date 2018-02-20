@@ -1,0 +1,2 @@
+class BeforeRacingExtension < ApplicationRecord
+end
