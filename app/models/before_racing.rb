@@ -1,0 +1,2 @@
+class BeforeRacing < ApplicationRecord
+end

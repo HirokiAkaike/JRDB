@@ -1,2 +1,0 @@
-class StandardStandardExactaOdd < ApplicationRecord
-end

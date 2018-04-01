@@ -1,6 +1,6 @@
 namespace :insert_standard_exacta_odd do
-  require_relative '../../app/helpers/disassemble_standard_exacta_odd.rake.rb'
-  require_relative '../../app/models/standard_exacta_odd.rake.rb'
+  require_relative '../../app/helpers/disassemble_standard_exacta_odd.rb'
+  require_relative '../../app/models/standard_exacta_odd.rb'
   require_relative '../../app/models/application_record.rb'
   C_TARGET_FILE = "db/resources/standard_exacta_odd.rake/**/*"
 

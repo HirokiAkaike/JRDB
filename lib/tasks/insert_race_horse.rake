@@ -2,7 +2,7 @@ namespace :insert_race_horse do
   require_relative '../../app/helpers/disassemble_race_horse.rb'
   require_relative '../../app/models/race_horse.rb'
   require_relative '../../app/models/application_record.rb'
-  TV_PROGRAM_TARGET_FILE = "db/resources/race_horse/**/*"
+  RACE_HORSE_TARGET_FILE = "db/resources/race_horse/**/*"
 
   desc "race_horse"
   task :race_horse => :environment do

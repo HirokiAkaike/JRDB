@@ -2,11 +2,11 @@ namespace :insert_jrdb_information do
   require_relative '../../app/helpers/disassemble_jrdb_information.rb'
   require_relative '../../app/models/jrdb_information.rb'
   require_relative '../../app/models/application_record.rb'
-  TV_PROGRAM_TARGET_FILE = "db/resources/jrdb_information/**/*"
+  JRDB_INFORMATION_TARGET_FILE = "db/resources/jrdb_information/**/*"
 
   desc "jrdb_information"
   task :jrdb_information => :environment do
-    targetFilesPath = Dir.glob TV_PROGRAM_TARGET_FILE
+    targetFilesPath = Dir.glob JRDB_INFORMATION_TARGET_FILE
     targetFilesPath.each do |filePath|
       jrdb_informations = []
       File.open(filePath) do |file|

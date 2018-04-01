@@ -1,6 +1,6 @@
-class CreateStandardStandardExactaOdds < ActiveRecord::Migration[5.1]
+class CreateStandardExactaOdds < ActiveRecord::Migration[5.1]
   def change
-    create_table :standard_standard_exacta_odds do |t|
+    create_table :standard_exacta_odds do |t|
 
       t.string :race_key_course_code
       t.string :race_key_year
